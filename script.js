@@ -5,8 +5,8 @@ const SECTIONS = [
     icon:`<svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="3" width="20" height="13"/><rect x="9" y="18" width="6" height="2" fill="#0b0414"/><rect x="6" y="20" width="12" height="2"/><rect x="5" y="5" width="14" height="9" fill="#0b0414"/></svg>`,
     body:`
       <h3>ABOUT_ME.TXT</h3>
-      <p>Hey — I'm Ziad El-Habashy. I'm a computer science sophomore at Misr International University in Cairo with hands-on frontend development experience from an internship at Code Alpha.</p>
-      <p>I've got a solid foundation in Java, C++, Python, OOP, and data structures &amp; algorithms — and right now I'm deepening my skills in Python, SQL, and data analysis as I work toward moving into Data Science Engineering.</p>
+      <p>Hey — I'm Ziad El-Habashy. I'm a computer science junior at Misr International University in Cairo, currently working as an Odoo Developer Intern at FlexCode Systems and a Shopify Developer at KRAFT Sportswear.</p>
+      <p>I've got hands-on experience in Odoo ERP development and module customization (Python, XML, PostgreSQL), plus a solid foundation in Java, C++, Python, SQL, OOP, and data structures &amp; algorithms. I'm passionate about using software engineering and database optimization to build scalable enterprise solutions.</p>
       <p>Based in Cairo, Egypt. Fluent in Arabic and English.</p>
     `
   },
@@ -25,11 +25,51 @@ const SECTIONS = [
     icon:`<svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="13"/><rect x="9" y="4" width="6" height="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="2" y="7" width="20" height="4" fill="#0b0414"/></svg>`,
     body:`
       <h3>EXPERIENCE.LOG</h3>
-      <p><b>Frontend Developer Intern</b> — Code Alpha<br>Dec 2025 – Jan 2026<br>
-      Built 4+ responsive landing pages by translating UI/UX wireframes into interactive interfaces using HTML, CSS, and JavaScript, improving mobile usability across major screen sizes.</p>
-      <hr class="divider">
-      <p><b>Event Coordinator (Freelance)</b> — Tickets Marche<br>2022 – 2025<br>
-      Coordinated on-ground operations for 10+ live events, managing attendee flow and venue logistics for crowds of 500+. Monitored ticket scanning systems across multiple entry points, coordinating with the technical team to minimize gate disruptions. Contributed to post-event reporting — documenting operational issues, attendee feedback, and improvement recommendations across 3 years of events.</p>
+      <div class="job">
+        <div class="job-title">Shopify Developer — KRAFT Sportswear</div>
+        <div class="job-meta">2025 – Present</div>
+        <ul>
+          <li><b>Shopify Development:</b> Build and maintain the Shopify storefront, including catalog sync with sales channels, product listings, and abandoned checkout recovery flows.</li>
+          <li><b>Quality Control &amp; Fulfillment:</b> Oversee Cash-on-Delivery (COD) order tracking and reconciliation, and manage quality control across product listings and fulfillment for the Egyptian market.</li>
+          <li><b>Creative Production &amp; Automation:</b> Built an AI-assisted content pipeline (Higgsfield, Seedance, CapCut) alongside a custom Python/Pillow image-compositing workflow for pixel-accurate logo placement, reducing manual design turnaround.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-title">Odoo Developer Intern — FlexCode Systems</div>
+        <div class="job-meta">June – July 2026</div>
+        <ul>
+          <li><b>Odoo Development &amp; Customization:</b> Develop and customize Odoo ERP modules using Python, XML, and PostgreSQL, designing tailormade Form, Tree, and Kanban views alongside QWeb reports.</li>
+          <li><b>Feature Delivery &amp; Optimization:</b> Collaborate with senior engineers to implement business logic, debug existing code, and optimize database queries across core Odoo applications.</li>
+          <li><b>Data Migration &amp; Cleansing:</b> Led large-scale contact deduplication and data cleansing efforts (analyzing 3,000+ duplicate record groups) using Python/pandas, improving data integrity ahead of CRM go-live.</li>
+          <li><b>CRM Implementation:</b> Supported end-to-end CRM implementation for a client project, including scope definition, change management (via structured change registers), and cross-functional coordination with client-side technical stakeholders.</li>
+          <li><b>Automation &amp; Data Governance:</b> Configured automated data recycling and archival rules to maintain database hygiene and reduce stale record buildup.</li>
+          <li><b>Troubleshooting &amp; Debugging:</b> Diagnosed and resolved build-level warnings and model inheritance issues (e.g., recursive field declarations) to maintain deployment stability on Odoo.sh.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-title">Summer Intern – Generative AI &amp; Banking — Commercial International Bank (CIB)</div>
+        <div class="job-meta">May 2026</div>
+        <ul>
+          <li><b>Emerging Technologies:</b> Explored practical applications of generative AI and modern fintech tools within commercial banking workflows.</li>
+          <li><b>Banking Knowledge &amp; Strategy:</b> Participated in training on core banking operations, emerging financial technologies, and future-focused financial skills.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-title">Frontend Developer Intern — Code Alpha</div>
+        <div class="job-meta">Dec 2025 – Jan 2026</div>
+        <ul>
+          <li>Built 4+ responsive landing pages by translating UI/UX wireframes into interactive interfaces using HTML, CSS, and JavaScript, improving mobile usability across major screen sizes.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-title">Team Leader — Tickets Marche</div>
+        <div class="job-meta">2022 – 2025</div>
+        <ul>
+          <li>Coordinated on-ground operations for 10+ live events, managing attendee flow and venue logistics for crowds of 500+ attendees.</li>
+          <li>Monitored ticket scanning systems across multiple entry points, coordinating with the technical team to minimize gate disruptions during live events.</li>
+          <li>Contributed to post-event reporting by documenting operational issues, attendee feedback, and improvement recommendations across 3 years of events.</li>
+        </ul>
+      </div>
     `
   },
   {
@@ -41,11 +81,6 @@ const SECTIONS = [
         <div class="project-title">E-Commerce Website</div>
         <div class="project-stack"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
         <p class="project-desc">Full-stack e-commerce web app with responsive frontend and backend integration — product listings, cart functionality, and basic user authentication.</p>
-      </div>
-      <div class="project">
-        <div class="project-title">Computer Networks Enterprise Project</div>
-        <div class="project-stack"><span class="tag">Cisco Packet Tracer</span><span class="tag">MIU</span></div>
-        <p class="project-desc">Multi-site enterprise network simulating a real organizational infrastructure: VLAN segmentation, inter-VLAN routing, OSPF and EIGRP with redistribution, DHCP, static &amp; PAT NAT, and site-to-site IPsec VPN. Added DNS, Web, Email, NTP, Syslog, and wireless services. Fully tested for end-to-end connectivity and documented for deployment and troubleshooting.</p>
       </div>
       <div class="project">
         <div class="project-title">Recruitment Management System</div>
@@ -72,17 +107,17 @@ const SECTIONS = [
       <p><b>Programming</b></p>
       <div><span class="tag">Java</span><span class="tag">C++</span><span class="tag">Python</span></div>
       <p><b>Web development</b></p>
-      <div><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Node.js</span></div>
+      <div><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">Angular</span><span class="tag">Vue.js</span></div>
       <p><b>Concepts</b></p>
       <div><span class="tag">OOP</span><span class="tag">Data Structures &amp; Algorithms</span><span class="tag">Problem Solving</span></div>
       <p><b>Database</b></p>
       <div><span class="tag">SQL</span><span class="tag">Database Design</span></div>
       <p><b>Tools</b></p>
-      <div><span class="tag">Cisco Packet Tracer</span><span class="tag">Git</span><span class="tag">GitHub</span></div>
-      <p><b>Networking</b></p>
-      <div><span class="tag">IP Addressing</span><span class="tag">Subnetting</span><span class="tag">VLANs</span><span class="tag">OSPF</span><span class="tag">EIGRP</span><span class="tag">NAT</span><span class="tag">DHCP</span><span class="tag">IPsec VPN</span><span class="tag">Routing</span></div>
+      <div><span class="tag">Git</span><span class="tag">GitHub</span></div>
+      <p><b>Other</b></p>
+      <div><span class="tag">Computer Networks</span></div>
       <p><b>Languages</b></p>
-      <div><span class="tag">Arabic — mother tongue</span><span class="tag">English — professional working proficiency</span></div>
+      <div><span class="tag">Arabic — mother tongue</span><span class="tag">English — excellent</span></div>
     `
   },
   {
@@ -108,9 +143,9 @@ const SECTIONS = [
       <h3>CONTACT.INFO</h3>
       <p>Location: Cairo, Egypt</p>
       <p>Email: <a href="mailto:ziadelhabashy5@gmail.com">ziadelhabashy5@gmail.com</a></p>
-      <p>Phone: +20 111 817 2555</p>
+      <p>Phone: +20 11 1817 2555</p>
       <p>GitHub: <a href="https://github.com/ziadelhabashy" target="_blank">github.com/ziadelhabashy</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/ziad-el-habashy" target="_blank">linkedin.com/in/ziad-el-habashy</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/ziadelhabashy" target="_blank">linkedin.com/in/ziadelhabashy</a></p>
     `
   },
 ];
