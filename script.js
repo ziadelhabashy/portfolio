@@ -230,6 +230,13 @@ function createWindowShell(id, icon, label){
   document.getElementById('desktop').appendChild(win);
   win.querySelector('.close').addEventListener('click', ()=>closeWindow(id));
   win.querySelector('.min').addEventListener('click', ()=>toggleMinimize(id));
+  win.querySelectorAll('.win-btns button').forEach(b=>{
+    // stop the tap from ever reaching the title bar's drag handler, so a
+    // touch that lands a pixel outside the (small) button hitbox can't
+    // get mistaken for the start of a window drag
+    b.addEventListener('pointerdown', e=>e.stopPropagation());
+    b.addEventListener('touchstart', e=>e.stopPropagation(), {passive:true});
+  });
   win.addEventListener('mousedown', ()=>focusWindow(id));
   win.addEventListener('touchstart', ()=>focusWindow(id), {passive:true});
   makeDraggable(win, win.querySelector('.win-title'));
