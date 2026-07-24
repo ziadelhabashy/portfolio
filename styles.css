@@ -145,6 +145,11 @@
   .project-title{font-family:'Press Start 2P',monospace;font-size:11px;color:var(--amber);line-height:1.6;margin-bottom:8px;}
   .project-stack{margin-bottom:8px;}
   .project-desc{margin:0;color:var(--text-dim);}
+  .job{margin:0 0 18px;padding:0 0 18px;border-bottom:1px dashed var(--violet-dim);}
+  .job:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+  .job-title{font-family:'Press Start 2P',monospace;font-size:11px;color:var(--amber);line-height:1.6;margin-bottom:4px;}
+  .job-meta{color:var(--text-dim);font-size:17px;margin-bottom:8px;}
+  .job ul{margin:0;}
   .win-body a{color:var(--cyan);}
   .win-body .divider{border:none;border-top:1px dashed var(--violet-dim);margin:14px 0;}
 
