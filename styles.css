@@ -114,10 +114,16 @@
     width:20px;height:20px;border:2px solid #000;background:var(--text-dim);color:#000;
     font-family:'Press Start 2P',monospace;font-size:8px;line-height:1;cursor:pointer;
     box-shadow:inset -1px -1px 0 rgba(0,0,0,.6), inset 1px 1px 0 rgba(255,255,255,.4);
-    padding:0;
+    padding:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent;
   }
   .win-btns button:active{box-shadow:inset 1px 1px 0 rgba(0,0,0,.6);}
   .win-btns .close{background:#ff6b6b;}
+
+  /* bigger tap targets on touch devices — 20px is too small to hit reliably with a finger */
+  @media (pointer:coarse){
+    .win-btns{gap:10px;}
+    .win-btns button{width:34px;height:34px;font-size:11px;}
+  }
   .win-body{
     padding:16px 16px 18px;overflow-y:auto;color:var(--text);
     font-family:'VT323',monospace;font-size:19px;line-height:1.45;
