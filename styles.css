@@ -209,7 +209,8 @@
     align-items:center;justify-content:center;font-family:'VT323',monospace;font-size:22px;
     text-align:center;padding:20px;
   }
-  #shutdown-screen.on{display:flex;}
+  #shutdown-screen.on{display:flex;} 
+
   #shutdown-screen button{
     margin-top:16px;font-family:'Press Start 2P',monospace;font-size:11px;color:#000;
     background:#7CFC9A;border:2px solid #000;padding:10px 14px;cursor:pointer;
