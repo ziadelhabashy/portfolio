@@ -186,15 +186,6 @@ function finishBoot(){
 document.getElementById('boot').addEventListener('click', finishBoot);
 runBoot();
 
-/* ============ CLOCK ============ */
-function tickClock(){
-  const d = new Date();
-  const hh = String(d.getHours()).padStart(2,'0');
-  const mm = String(d.getMinutes()).padStart(2,'0');
-  document.getElementById('clock').textContent = hh+':'+mm;
-}
-tickClock(); setInterval(tickClock, 1000*15);
-
 /* ============ ICON GRID ============ */
 const grid = document.getElementById('icon-grid');
 SECTIONS.forEach(sec=>{
