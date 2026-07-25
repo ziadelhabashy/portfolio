@@ -47,19 +47,10 @@
     background-size:100% 100%;
   }
 
-  .topbar{
-    position:relative;z-index:2;display:flex;align-items:center;justify-content:flex-end;
-    padding:10px 14px;gap:10px;
-  }
-  .clockchip{
-    font-family:'VT323',monospace;font-size:20px;color:var(--cyan);background:#060e18;
-    border:2px solid var(--accent-dim);padding:6px 12px;
-    box-shadow:inset -2px -2px 0 rgba(0,0,0,.7), inset 2px 2px 0 rgba(77,163,255,.15);
-  }
 
   .desktop-title{
     text-align:center;font-family:'Press Start 2P',monospace;color:var(--text);
-    font-size:14px;letter-spacing:1px;margin:6px 0 2px;position:relative;z-index:2;
+    font-size:14px;letter-spacing:1px;margin:22px 0 2px;position:relative;z-index:2;
     text-shadow:0 0 10px var(--accent), 0 0 20px rgba(77,163,255,.5);
   }
   .desktop-sub{
