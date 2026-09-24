@@ -5,8 +5,8 @@ const SECTIONS = [
     icon:`<svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="3" width="20" height="13"/><rect x="9" y="18" width="6" height="2" fill="#0b0414"/><rect x="6" y="20" width="12" height="2"/><rect x="5" y="5" width="14" height="9" fill="#0b0414"/></svg>`,
     body:`
       <h3>ABOUT_ME.TXT</h3>
-      <p>Hey — I'm Ziad El-Habashy. I'm a computer science junior at Misr International University in Cairo, currently working as an Odoo Developer Intern at FlexCode Systems and a Shopify Developer at KRAFT Sportswear.</p>
-      <p>I've got hands-on experience in Odoo ERP development and module customization (Python, XML, PostgreSQL), plus a solid foundation in Java, C++, Python, SQL, OOP, and data structures &amp; algorithms. I'm passionate about using software engineering and database optimization to build scalable enterprise solutions.</p>
+      <p>Hey — I'm Ziad El-Habashy. I'm a computer science junior at Misr International University in Cairo, co-founder and Shopify developer at Kraft Wear, and most recently an Odoo Developer Intern at FlexCode Systems.</p>
+      <p>I've got hands-on experience in Odoo ERP development and module customization (Python, XML, PostgreSQL), plus a solid foundation in Java, C++, Python, SQL, OOP, and data structures &amp; algorithms. I'm passionate about leveraging software engineering principles and database optimization to build scalable enterprise solutions as an Odoo Developer.</p>
       <p>Based in Cairo, Egypt. Fluent in Arabic and English.</p>
     `
   },
@@ -26,7 +26,7 @@ const SECTIONS = [
     body:`
       <h3>EXPERIENCE.LOG</h3>
       <div class="job">
-        <div class="job-title">Shopify Developer — KRAFT Sportswear</div>
+        <div class="job-title">Co-Founder &amp; Shopify Developer — Kraft Wear</div>
         <div class="job-meta">2025 – Present</div>
         <ul>
           <li><b>Shopify Development:</b> Build and maintain the Shopify storefront, including catalog sync with sales channels, product listings, and abandoned checkout recovery flows.</li>
@@ -36,10 +36,10 @@ const SECTIONS = [
       </div>
       <div class="job">
         <div class="job-title">Odoo Developer Intern — FlexCode Systems</div>
-        <div class="job-meta">June – July 2026</div>
+        <div class="job-meta">Jun – Aug 2026</div>
         <ul>
-          <li><b>Odoo Development &amp; Customization:</b> Develop and customize Odoo ERP modules using Python, XML, and PostgreSQL, designing tailormade Form, Tree, and Kanban views alongside QWeb reports.</li>
-          <li><b>Feature Delivery &amp; Optimization:</b> Collaborate with senior engineers to implement business logic, debug existing code, and optimize database queries across core Odoo applications.</li>
+          <li><b>Odoo Development &amp; Customization:</b> Developed and customized Odoo ERP modules using Python, XML, and PostgreSQL, designing tailor-made Form, Tree, and Kanban views alongside QWeb reports.</li>
+          <li><b>Feature Delivery &amp; Optimization:</b> Collaborated with senior engineers to implement business logic, debug existing code, and optimize database queries across core Odoo applications.</li>
           <li><b>Data Migration &amp; Cleansing:</b> Led large-scale contact deduplication and data cleansing efforts (analyzing 3,000+ duplicate record groups) using Python/pandas, improving data integrity ahead of CRM go-live.</li>
           <li><b>CRM Implementation:</b> Supported end-to-end CRM implementation for a client project, including scope definition, change management (via structured change registers), and cross-functional coordination with client-side technical stakeholders.</li>
           <li><b>Automation &amp; Data Governance:</b> Configured automated data recycling and archival rules to maintain database hygiene and reduce stale record buildup.</li>
@@ -52,13 +52,6 @@ const SECTIONS = [
         <ul>
           <li><b>Emerging Technologies:</b> Explored practical applications of generative AI and modern fintech tools within commercial banking workflows.</li>
           <li><b>Banking Knowledge &amp; Strategy:</b> Participated in training on core banking operations, emerging financial technologies, and future-focused financial skills.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <div class="job-title">Frontend Developer Intern — Code Alpha</div>
-        <div class="job-meta">Dec 2025 – Jan 2026</div>
-        <ul>
-          <li>Built 4+ responsive landing pages by translating UI/UX wireframes into interactive interfaces using HTML, CSS, and JavaScript, improving mobile usability across major screen sizes.</li>
         </ul>
       </div>
       <div class="job">
@@ -83,6 +76,11 @@ const SECTIONS = [
         <p class="project-desc">Full-stack e-commerce web app with responsive frontend and backend integration — product listings, cart functionality, and basic user authentication.</p>
       </div>
       <div class="project">
+        <div class="project-title">Computer Networks Enterprise Project</div>
+        <div class="project-stack"><span class="tag">Cisco Packet Tracer</span><span class="tag">MIU</span></div>
+        <p class="project-desc">Multi-site enterprise network featuring VLANs, OSPF/EIGRP redistribution, NAT/PAT, and site-to-site IPsec VPN, plus DNS, Web, Email, and wireless services — fully tested end to end.</p>
+      </div>
+      <div class="project">
         <div class="project-title">Recruitment Management System</div>
         <div class="project-stack"><span class="tag">Java</span></div>
         <p class="project-desc">OOP-based recruitment system with role-based logic and data handling to manage candidates and recruitment workflows.</p>
@@ -105,13 +103,15 @@ const SECTIONS = [
     body:`
       <h3>SKILLS.SYS</h3>
       <p><b>Programming</b></p>
-      <div><span class="tag">Java</span><span class="tag">C++</span><span class="tag">Python</span></div>
+      <div><span class="tag">Java</span><span class="tag">C++</span><span class="tag">Python</span><span class="tag">PHP</span></div>
+      <p><b>ERP &amp; Platforms</b></p>
+      <div><span class="tag">Odoo (ORM, QWeb, Odoo.sh)</span><span class="tag">Shopify</span></div>
       <p><b>Web development</b></p>
-      <div><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">Angular</span><span class="tag">Vue.js</span></div>
+      <div><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">XML</span><span class="tag">Node.js</span></div>
       <p><b>Concepts</b></p>
       <div><span class="tag">OOP</span><span class="tag">Data Structures &amp; Algorithms</span><span class="tag">Problem Solving</span></div>
       <p><b>Database</b></p>
-      <div><span class="tag">SQL</span><span class="tag">Database Design</span></div>
+      <div><span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">Database Design</span></div>
       <p><b>Tools</b></p>
       <div><span class="tag">Git</span><span class="tag">GitHub</span></div>
       <p><b>Other</b></p>
@@ -142,7 +142,7 @@ const SECTIONS = [
     body:`
       <h3>CONTACT.INFO</h3>
       <p>Location: Cairo, Egypt</p>
-      <p>Email: <a href="mailto:ziadelhabashy5@gmail.com">ziadelhabashy5@gmail.com</a></p>
+      <p>Email: <a href="mailto:ziadelhabashy@outlook.com">ziadelhabashy@outlook.com</a></p>
       <p>Phone: +20 11 1817 2555</p>
       <p>GitHub: <a href="https://github.com/ziadelhabashy" target="_blank">github.com/ziadelhabashy</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/ziadelhabashy" target="_blank">linkedin.com/in/ziadelhabashy</a></p>
@@ -355,11 +355,11 @@ function openTerminal(){
     const log = win.querySelector('#term-log');
     const commands = {
       help: ()=> "commands: whoami, about, skills, projects, contact, clear",
-      whoami: ()=> "ziad el-habashy — CS student @ Misr International University, frontend dev intern @ Code Alpha",
-      about: ()=> "moving toward Data Science Engineering. strong in Java/C++/Python, OOP, networking, and web dev.",
-      skills: ()=> "Java, C++, Python, HTML/CSS/JS, Node.js, SQL, OOP, DS&A, networking (VLANs/OSPF/EIGRP/NAT/IPsec), Git",
+      whoami: ()=> "ziad el-habashy — CS junior @ Misr International University, co-founder & shopify dev @ Kraft Wear, ex-odoo dev intern @ FlexCode Systems",
+      about: ()=> "aspiring Odoo developer. hands-on with Odoo ERP (Python, XML, PostgreSQL), strong in Java/C++/Python, SQL, OOP, and DS&A.",
+      skills: ()=> "Java, C++, Python, PHP, Odoo (ORM/QWeb/Odoo.sh), Shopify, PostgreSQL/SQL, HTML/CSS/JS, XML, Node.js, OOP, DS&A, networking (VLANs/OSPF/EIGRP/NAT/IPsec), Git",
       projects: ()=> "E-Commerce Website, Computer Networks Enterprise Project, Recruitment Management System, Graph Traversal Engine, MIU GPA Calculator — see the Projects window for details",
-      contact: ()=> "ziadelhabashy5@gmail.com — open the Contact window from the desktop for all links",
+      contact: ()=> "ziadelhabashy@outlook.com — open the Contact window from the desktop for all links",
       clear: ()=> { log.textContent=''; return null; },
     };
     input.addEventListener('keydown', (e)=>{
