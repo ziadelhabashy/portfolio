@@ -125,7 +125,38 @@ const SECTIONS = [
     icon:`<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="6"/><polygon points="8,13 5,21 12,18 19,21 16,13"/></svg>`,
     body:`
       <h3>CERTIFICATES.DAT</h3>
-      <p class="placeholder">No certificates listed yet — send me the names, issuers, and dates and I'll drop them in here.</p>
+      <div class="project">
+        <div class="project-title">Generative AI</div>
+        <div class="job-meta">Commercial International Bank (CIB) · Jul 2026</div>
+      </div>
+      <div class="project">
+        <div class="project-title">Claude 101</div>
+        <div class="job-meta">Anthropic · Jun 2026</div>
+      </div>
+      <div class="project">
+        <div class="project-title">HCIA-AI V4.0 Course</div>
+        <div class="job-meta">Huawei ICT Academy · Apr 2026</div>
+      </div>
+      <div class="project">
+        <div class="project-title">Generative AI Foundations</div>
+        <div class="job-meta">AWS Academy · Mar 2026</div>
+      </div>
+      <div class="project">
+        <div class="project-title">Fundamentals of Deep Learning</div>
+        <div class="job-meta">NVIDIA · Feb 2026</div>
+      </div>
+      <div class="project">
+        <div class="project-title">Building Multi-Agent Systems with LangGraph, EDA &amp; Generative AI on Google Cloud</div>
+        <div class="job-meta">Google for Developers · Jan 2026</div>
+      </div>
+      <div class="project">
+        <div class="project-title">Intermediate SQL</div>
+        <div class="job-meta">DataCamp · Jan 2026</div>
+      </div>
+      <div class="project">
+        <div class="project-title">HCIA-AI V3.5 Course</div>
+        <div class="job-meta">Huawei ICT Academy · Sep 2025</div>
+      </div>
     `
   },
   {
@@ -137,6 +168,10 @@ const SECTIONS = [
     `
   },
   {
+    id:'cv', label:'Download CV', href:'assets/Ziad-El-Habashy-CV.pdf', download:'Ziad-El-Habashy-CV.pdf',
+    icon:`<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="4,2 15,2 20,7 20,22 4,22"/><polygon points="15,2 15,7 20,7" fill="#0b0414"/><rect x="11" y="9" width="2" height="7" fill="#0b0414"/><polygon points="8,13 16,13 12,18" fill="#0b0414"/></svg>`,
+  },
+  {
     id:'contact', label:'Contact',
     icon:`<svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="5" width="20" height="14"/><polygon points="2,5 12,13 22,5" fill="#0b0414"/></svg>`,
     body:`
@@ -146,6 +181,7 @@ const SECTIONS = [
       <p>Phone: +20 11 1817 2555</p>
       <p>GitHub: <a href="https://github.com/ziadelhabashy" target="_blank">github.com/ziadelhabashy</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/ziadelhabashy" target="_blank">linkedin.com/in/ziadelhabashy</a></p>
+      <p>CV: <a href="assets/Ziad-El-Habashy-CV.pdf" download="Ziad-El-Habashy-CV.pdf">Download PDF</a></p>
     `
   },
 ];
@@ -186,13 +222,26 @@ function finishBoot(){
 document.getElementById('boot').addEventListener('click', finishBoot);
 runBoot();
 
+/* ============ LINK ENTRIES ============ */
+// entries with an href (e.g. the CV) download/open a file instead of opening a window
+function activate(sec){
+  if(!sec.href) return openWindow(sec.id);
+  const a = document.createElement('a');
+  a.href = sec.href;
+  if(sec.download) a.download = sec.download;
+  else a.target = '_blank';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
 /* ============ ICON GRID ============ */
 const grid = document.getElementById('icon-grid');
 SECTIONS.forEach(sec=>{
   const div = document.createElement('div');
   div.className='icon';
   div.innerHTML = `<div class="icon-glyph">${sec.icon}</div><div class="icon-label">${sec.label}</div>`;
-  div.addEventListener('click', ()=>openWindow(sec.id));
+  div.addEventListener('click', ()=>activate(sec));
   grid.appendChild(div);
 });
 
@@ -319,7 +368,7 @@ const smItems = document.getElementById('sm-items');
 SECTIONS.forEach(sec=>{
   const b = document.createElement('button');
   b.textContent = sec.label;
-  b.addEventListener('click', ()=>{ openWindow(sec.id); startMenu.classList.remove('open'); });
+  b.addEventListener('click', ()=>{ activate(sec); startMenu.classList.remove('open'); });
   smItems.appendChild(b);
 });
 const termBtn = document.createElement('button');
@@ -354,11 +403,13 @@ function openTerminal(){
     const input = win.querySelector('#term-input');
     const log = win.querySelector('#term-log');
     const commands = {
-      help: ()=> "commands: whoami, about, skills, projects, contact, clear",
+      help: ()=> "commands: whoami, about, skills, projects, certs, cv, contact, clear",
       whoami: ()=> "ziad el-habashy — CS junior @ Misr International University, co-founder & shopify dev @ Kraft Wear, ex-odoo dev intern @ FlexCode Systems",
       about: ()=> "aspiring Odoo developer. hands-on with Odoo ERP (Python, XML, PostgreSQL), strong in Java/C++/Python, SQL, OOP, and DS&A.",
       skills: ()=> "Java, C++, Python, PHP, Odoo (ORM/QWeb/Odoo.sh), Shopify, PostgreSQL/SQL, HTML/CSS/JS, XML, Node.js, OOP, DS&A, networking (VLANs/OSPF/EIGRP/NAT/IPsec), Git",
       projects: ()=> "E-Commerce Website, Computer Networks Enterprise Project, Recruitment Management System, Graph Traversal Engine, MIU GPA Calculator — see the Projects window for details",
+      certs: ()=> "CIB Generative AI, Anthropic Claude 101, Huawei HCIA-AI V4.0 & V3.5, AWS Generative AI Foundations, NVIDIA Fundamentals of Deep Learning, Google Build with AI (LangGraph multi-agent), DataCamp Intermediate SQL — see the Certificates window",
+      cv: ()=> { activate(SECTIONS.find(s=>s.id==='cv')); return "downloading Ziad-El-Habashy-CV.pdf ..."; },
       contact: ()=> "ziadelhabashy@outlook.com — open the Contact window from the desktop for all links",
       clear: ()=> { log.textContent=''; return null; },
     };
